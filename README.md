@@ -1,37 +1,19 @@
 # MoYun-AI-Models
 
-#### 介绍
-墨云天气本地AI模型仓库(ONNX)
+墨云天气本地 AI 模型仓库（ONNX 格式，50MB 分卷存储）。
 
-#### 软件架构
-软件架构说明
+## 模型列表
 
+| 模型 | 目录 | 大小 | 分卷数 |
+|------|------|------|--------|
+| Qwen1.5-0.5B-Chat (INT8) | qwen1.5-0.5b/ | 460MB | 10 |
+| GPT-2 (INT8) | gpt2/ | 269MB | 6 |
 
-#### 安装教程
+## 来源
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+- Qwen1.5-0.5B-Chat: https://huggingface.co/Xenova/Qwen1.5-0.5B-Chat (ONNX INT8)
+- GPT-2: https://huggingface.co/Xenova/gpt2 (ONNX INT8)
 
-#### 使用说明
+## 应用端使用
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+应用下载所有 .partNN 分卷后自动合并为 model.onnx，配合 tokenizer.json 使用 ONNX Runtime 推理。
